@@ -16,7 +16,7 @@ function ExpenseItem(props) {
         <h2>{title}</h2>
       </div>
       <div className="expense-item__price">{props.amount}</div>
-      <button onClick={hancleClick}>Change date</button>
+      {/* <button onClick={hancleClick}>Change date</button> */}
     </Cards>
   );
 }
