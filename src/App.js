@@ -27,7 +27,6 @@ const DUMMY_EXPENSES = [
 ];
 
 function App() {
-  const [filterYear, setFilterYear] = useState("2019");
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   const addExpenseHandler = (expense) => {
     console.log("In App.js");
@@ -36,18 +35,10 @@ function App() {
     });
   };
 
-  const filterChangeHandler = (selectedYear) => {
-    setFilterYear(selectedYear);
-    console.log(selectedYear);
-  };
-
   return (
     <Cards className="expenses">
       <NewExpense onAddExpense={addExpenseHandler} />
-      <ExpenseFilter
-        selected={filterYear}
-        onChangeFilter={filterChangeHandler}
-      />
+
       <Expenses item={expenses} />
     </Cards>
   );
